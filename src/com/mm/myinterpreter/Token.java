@@ -1,3 +1,5 @@
+package com.mm.myinterpreter;
+
 public class Token {
     final private TokenType type;
     final private String lexeme;
@@ -15,5 +17,9 @@ public class Token {
     public String toString()
     {
         return type + " " + lexeme + " " + literal;
+    }
+
+    public String getLexeme() {
+        return lexeme;
     }
 }
