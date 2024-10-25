@@ -3,7 +3,7 @@ package com.mm.myinterpreter.expressions;
 import java.util.List;
 
 import com.mm.myinterpreter.Token;
-abstract class Expr {
+public abstract class Expr {
 
     interface Visitor<T> {
     T visitBinaryExpr(Binary expr);
@@ -14,8 +14,8 @@ abstract class Expr {
 
     abstract <T> T accept(Visitor<T> visitor);
 
-    static class Binary extends Expr {
-    Binary(Expr left, Token operator, Expr right) {
+    public static class Binary extends Expr {
+    public Binary(Expr left, Token operator, Expr right) {
     this.left = left;
     this.operator = operator;
     this.right = right;

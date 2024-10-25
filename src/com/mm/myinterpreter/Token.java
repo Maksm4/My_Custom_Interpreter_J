@@ -22,4 +22,8 @@ public class Token {
     public String getLexeme() {
         return lexeme;
     }
+
+    public TokenType getType() {
+        return type;
+    }
 }
